@@ -1,4 +1,6 @@
 # JKFLIPFLOP-USING-IF-ELSE
+## Name: Renick Fabian Rajesh
+## Reg No: 212224230227
 
 **AIM:** 
 
@@ -34,41 +36,39 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-1.Use module projname(input,output) to start the Verilog programming. 2.Assign inputs and outputs using the word input and output respectively. 3.Use defined keywords like wire,assign and required logic gates to represent the boolean expression. 4.Use each output to represent one for difference and the other for borrow. 5.End the verilog program using keyword endmodule
+/* write all the steps invloved */
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+```
+module experiment7(J,K,c1k,q,qbar);
+input J,K,c1k;
+output reg q;
+output reg qbar;
+initial q=0;
+initial qbar=1;
+always @(posedge c1k)
+begin
+q=((J&(~q)))|((~K)&q);
+qbar=~q;
+end
+endmodule
+```
+Developed by: Renick Fabian Rajesh
+RegisterNumber: 212224230227
 
-
-    module program7(j,k,clk,q,qbar);
-    input j,k,clk;
-    output reg q,qbar;
-    initial 
-    begin
-    q=1'b0;
-    q=1'b1;
-    end 
-
-    always @(posedge clk)
-    begin 
-    q<=(j&~q)|(~k&q);
-    qbar<=~q;
-    end
-    endmodule
-
-
-
-
-
-Developed by:S.RAVANT VIGNESH RegisterNumber:24900151
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
-![image](https://github.com/user-attachments/assets/aecb33d4-7f01-4e33-be6d-9eeb7e94e947)
+
+![Screenshot 2024-12-03 103721](https://github.com/user-attachments/assets/87e5f2d5-cf21-4e33-bcc5-bace18eed362)
+
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![image](https://github.com/user-attachments/assets/7cc066d6-cb9d-48f0-b6eb-83f36477e4f9)
+
+![Screenshot 2024-12-03 103845](https://github.com/user-attachments/assets/f381383b-9522-43b1-af8d-a03c3e7349cc)
+
 
 **RESULTS**
-Thus the JK flipflop is implemented using verilog and validated their functionality using their functional tables
+Thus the JK flipflop implemented successfully and truth table has verified
